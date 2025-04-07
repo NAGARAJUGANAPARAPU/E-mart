@@ -8,7 +8,16 @@ import Footer from "../components/Footer";
 const Acsingle = () => {
   const { id } = useParams();
   const { cart, addToCart } = useCart();
-
+  const deliveryDate = new Date();
+  deliveryDate.setDate(deliveryDate.getDate() + 3); // Example: +3 days
+  deliveryDate.toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+  });
+  const deliveryTime = `${deliveryDate.getHours()}:${deliveryDate.getMinutes()} ${
+    deliveryDate.getHours() >= 12 ? "PM" : "AM"
+  }`;
   const Product = acData.find((item) => item.id === id);
 
   return (
@@ -49,10 +58,28 @@ const Acsingle = () => {
 
           <div className="second-one">
             <div className="product-type">
-              <h2>{Product.product}</h2>
-              <h2>{Product.company}</h2>
-              <h2>{Product.model}</h2>
-              <p className="price">Price: ${Product.price}</p>
+              <h2>
+                <strong>Brand:</strong>
+                {Product.company}
+              </h2>
+              <h2>
+                <strong>Model:</strong>
+                {Product.model}
+              </h2>
+              <h2>
+                <strong>Category:</strong>
+                {Product.category}
+              </h2>
+              <h2>
+                <strong>Description:</strong>
+                {Product.description}
+              </h2>
+              <p className="price">
+                <strong>Price:</strong> ${Product.price}
+              </p>
+              <button className="primary" onClick={() => addToCart(Product)}>
+                Add to Cart
+              </button>
             </div>
 
             <div className="offers">
@@ -115,7 +142,11 @@ const Acsingle = () => {
               <h3>In Stock</h3>
               <p>
                 Delivery by:{" "}
-                {new Date().toLocaleDateString("en-US", { weekday: "long" })}
+                {new Date().toLocaleDateString("en-US", {
+                  weekday: "long",
+                  month: "long",
+                  day: "numeric",
+                })}
               </p>
               <p>Delivery Address: 123 Main Street, Springfield</p>
               <p>Delivery Time: Between 9:00 AM - 6:00 PM</p>
@@ -165,9 +196,7 @@ const Acsingle = () => {
                 </label>
               </div>
             </div>
-            <button className="primary" onClick={() => addToCart(Product)}>
-              Add to Cart
-            </button>
+
             <div className="buy-now">
               <button
                 className="primary"

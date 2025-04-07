@@ -517,6 +517,7 @@ button[type="submit"]:hover {
   align-items: center;
   justify-content: left;
   background-color: #f5f7fa;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .product-details {
@@ -533,6 +534,7 @@ button[type="submit"]:hover {
   padding: 20px;
   border-radius: 10px;
   background: #ffffff;
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
@@ -557,9 +559,34 @@ h3 {
   color: #4e9ef4;
   margin-bottom: 8px;
 }
-.second-one{
- padding-top: 500px;
+
+.product-type {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
 }
+
+.product-type h2 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-type strong {
+  color: #e27979;
+}
+
+.product-type .price {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  color: #2a9d8f;
+  font-weight: bold;
+}
+
 
 .product-advantages,
 .product-features,
@@ -617,33 +644,10 @@ span {
 }
 
 
-.product-type {
-  text-align: center;
-  margin: 20px 0;
-  padding: 15px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product-type h2 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
-  margin: 10px 0;
-}
-
-.product-type .price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #e63946;
-}
 .offers{
   display: inline-block;
   width:100%;
-  padding: 50px 10px;
-
- 
+  
 }
  .offers-box1{
  /* border: 1px solid rgb(36, 35, 35); */
@@ -658,9 +662,5 @@ span {
   height: 100%;
   display: flex; 
  border: none;
-
-
-
- 
-  
 }
+
