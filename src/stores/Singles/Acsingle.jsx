@@ -9,15 +9,7 @@ const Acsingle = () => {
   const { id } = useParams();
   const { cart, addToCart } = useCart();
   const deliveryDate = new Date();
-  deliveryDate.setDate(deliveryDate.getDate() + 3); // Example: +3 days
-  deliveryDate.toLocaleDateString("en-US", {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-  });
-  const deliveryTime = `${deliveryDate.getHours()}:${deliveryDate.getMinutes()} ${
-    deliveryDate.getHours() >= 12 ? "PM" : "AM"
-  }`;
+
   const Product = acData.find((item) => item.id === id);
 
   return (

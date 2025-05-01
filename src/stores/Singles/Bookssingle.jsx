@@ -31,24 +31,10 @@ const Bookssingle = () => {
 
             <div className="product-advantages">
               <h3>Product Advantages</h3>
-              <ul>
-                <li>Energy efficient with 5-star rating</li>
-                <li>Advanced cooling technology</li>
-                <li>Low noise operation</li>
-                <li>Durable and long-lasting build</li>
-                <li>Environment-friendly refrigerant</li>
-              </ul>
             </div>
 
             <div className="product-features">
               <h3>Product Features</h3>
-              <ul>
-                <li>Smart temperature control</li>
-                <li>Wi-Fi connectivity for remote operation</li>
-                <li>Auto-clean function</li>
-                <li>Dehumidifier mode</li>
-                <li>Sleep mode for energy saving</li>
-              </ul>
             </div>
           </div>
 
@@ -74,8 +60,8 @@ const Bookssingle = () => {
                 <strong>Price:</strong> ${Product.price}
               </p>
               <button className="primary" onClick={() => addToCart(Product)}>
-              Add to Cart
-            </button>
+                Add to Cart
+              </button>
             </div>
 
             <div className="offers">
@@ -192,7 +178,7 @@ const Bookssingle = () => {
                 </label>
               </div>
             </div>
-          
+
             <div className="buy-now">
               <button
                 className="primary"
